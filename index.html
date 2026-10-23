@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090b">
+<title>Renta de Trajes Santiago | Transferencias</title>
+<style>
+:root{--bg:#08090b;--gold:#d7ad5b;--light:#fff8e9;--muted:#c8c0b2;--line:#554225}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#29231a,#08090b 60%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--light)}
+main{width:min(100% - 24px,520px);margin:20px auto}.card{border:1px solid var(--gold);border-radius:24px;overflow:hidden;background:#090a0c;box-shadow:0 18px 45px #0008}
+header{text-align:center;padding:28px 16px 24px;background:linear-gradient(135deg,#1b1b1c,#08090b);border-bottom:1px solid var(--line)}
+.kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#f1d89c}
+h1{font: bold clamp(30px,8vw,42px)/1.08 Georgia,serif;letter-spacing:.05em;color:#f3d99b;margin:10px 0}
+.symbol{font-size:23px;color:var(--gold);margin:8px}.tag{font:italic 17px Georgia,serif;color:#f5e8ce;margin:0}
+.content{padding:22px 18px}.thanks{text-align:center;color:#f3d99b;font:italic 24px Georgia,serif;margin:0 0 8px}
+.intro{text-align:center;color:var(--muted);font-size:14px;line-height:1.5;margin:0 auto 20px}
+.bank{display:flex;justify-content:center;align-items:center;gap:10px;border:1px solid var(--line);border-radius:14px;padding:13px;background:#151518;margin-bottom:10px}
+.bankicon{width:35px;height:35px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:19px}
+.banktitle{font-size:18px;font-weight:800}.bankname{font-size:12px;color:#f3d99b;margin-top:3px}
+.field{padding:14px 0;border-bottom:1px solid #3b3326}.label{font-size:11px;letter-spacing:.05em;color:var(--gold);margin-bottom:7px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px}.value{font-size:15px;font-weight:650;overflow-wrap:anywhere;line-height:1.4}.placeholder{color:#e4d5b7}
+button{font:inherit;cursor:pointer}.copy{flex-shrink:0;background:var(--gold);color:#17120a;border:0;border-radius:9px;padding:10px 11px;font-size:12px;font-weight:800}
+.all{width:100%;margin-top:16px;border:1px solid #f3d99b;border-radius:12px;padding:14px;background:linear-gradient(100deg,#b98a39,#f3d99b,#b98a39);color:#17120a;font-weight:850}
+.status{min-height:20px;text-align:center;color:#f3d99b;font-size:13px;margin-top:10px}.note{font-size:11px;color:#aaa397;line-height:1.5;text-align:center;margin:12px 0 0}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:20px}.step{border:1px solid #403522;border-radius:12px;padding:12px 9px;text-align:center;background:#101114}.num{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;margin:0 auto 7px;background:var(--gold);color:#17120a;font-weight:850}.step p{font-size:12px;line-height:1.4;color:#ded6c7;margin:0}
+footer{text-align:center;border-top:1px solid var(--line);padding:18px 10px;color:#f3d99b;font:italic 16px Georgia,serif}.fine{text-align:center;color:#817b70;font-size:10px;margin:12px 0}
+@media(min-width:440px){.steps{grid-template-columns:repeat(4,1fr)}.step p{font-size:11px}}
+</style></head>
+<body><main><section class="card">
+<header><div class="kicker">Elegancia en cada ocasión</div><h1>RENTA DE TRAJES<br>SANTIAGO</h1><div class="symbol">✦ ── ♛ ── ✦</div><p class="tag">Gracias por tu preferencia</p></header>
+<div class="content">
+<p class="thanks">Paga fácil por transferencia</p><p class="intro">Copia los datos bancarios y pégalos en la aplicación de tu banco para realizar tu transferencia.</p>
+<div class="bank"><div class="bankicon">▤</div><div><div class="banktitle">Datos bancarios</div><div class="bankname" id="bank">Banco Azteca</div></div></div>
+<div class="field"><div class="label">TITULAR DE LA CUENTA</div><div class="row"><div class="value placeholder" id="holder">Agrega aquí el nombre del titular</div><button class="copy" onclick="copyField('holder')">Copiar</button></div></div>
+<div class="field"><div class="label">CLABE INTERBANCARIA · 18 DÍGITOS</div><div class="row"><div class="value placeholder" id="clabe">Agrega aquí tu CLABE</div><button class="copy" onclick="copyField('clabe')">Copiar CLABE</button></div></div>
+<div class="field"><div class="label">NÚMERO DE TARJETA</div><div class="row"><div class="value placeholder" id="cardDisplay">•••• •••• •••• ••••</div><button class="copy" onclick="copyCard()">Copiar tarjeta</button></div><div class="note" style="text-align:left;margin-top:7px">El número se muestra oculto. Al pulsar “Copiar tarjeta”, se copiará el número completo configurado para esta página.</div></div>
+<button class="all" onclick="copyAll()">COPIAR TODOS LOS DATOS</button><div class="status" id="status" role="status" aria-live="polite"></div>
+<p class="note">Antes de autorizar el pago, verifica el nombre del destinatario y los datos en tu aplicación bancaria. Esta página no procesa pagos ni confirma depósitos.</p>
+<div class="steps"><div class="step"><div class="num">1</div><p>Consulta los datos bancarios.</p></div><div class="step"><div class="num">2</div><p>Copia la CLABE o la tarjeta.</p></div><div class="step"><div class="num">3</div><p>Pega los datos en tu app bancaria.</p></div><div class="step"><div class="num">4</div><p>Revisa y autoriza el pago.</p></div></div>
+</div><footer>Renta de Trajes Santiago · Tu confianza nos impulsa</footer></section><p class="fine">Página informativa de pagos · Renta de Trajes Santiago</p></main>
+<script>
+async function clipboard(text){if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return}const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();const ok=document.execCommand('copy');t.remove();if(!ok)throw Error('copy')}
+function val(id){return document.getElementById(id).textContent.trim()}
+async function copyField(id){const v=val(id),s=document.getElementById('status');if(v.toLowerCase().startsWith('agrega aquí')){s.textContent='Este dato debe configurarse antes de usar la página.';return}try{await clipboard(v);s.textContent='Dato copiado. Ya puedes pegarlo en tu app bancaria.'}catch(e){s.textContent='No se pudo copiar automáticamente; mantén presionado el dato para copiarlo.'}}
+const CARD_NUMBER = 'CONFIGURA_AQUI_EL_NUMERO_DE_TARJETA';
+async function copyCard(){const s=document.getElementById('status');if(!/^\d{16}$/.test(CARD_NUMBER)){s.textContent='Configura el número de tarjeta de 16 dígitos antes de usar esta función.';return}try{await clipboard(CARD_NUMBER);s.textContent='Número de tarjeta copiado.'}catch(e){s.textContent='No se pudo copiar automáticamente.'}}
+async function copyAll(){const f=[['Banco','bank'],['Titular','holder'],['CLABE','clabe']];if(f.some(([n,id])=>val(id).toLowerCase().startsWith('agrega aquí'))){document.getElementById('status').textContent='Completa los datos antes de utilizar esta función.';return}try{await clipboard(f.map(([n,id])=>n+': '+val(id)).join('\n'));document.getElementById('status').textContent='Banco, titular y CLABE copiados. Copia la tarjeta con su botón.'}catch(e){document.getElementById('status').textContent='Copia cada dato por separado.'}}
