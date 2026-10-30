@@ -1,59 +1,108 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#08090b">
-<title>Renta de Trajes Santiago | Transferencias</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Renta de Trajes Santiago | Datos bancarios</title>
 <style>
-:root{--bg:#08090b;--gold:#d7ad5b;--light:#fff8e9;--muted:#c8c0b2;--line:#554225}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#29231a,#08090b 60%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--light)}
-main{width:min(100% - 24px,520px);margin:20px auto}.card{border:1px solid var(--gold);border-radius:24px;overflow:hidden;background:#090a0c;box-shadow:0 18px 45px #0008}
-header{text-align:center;padding:28px 16px 24px;background:linear-gradient(135deg,#1b1b1c,#08090b);border-bottom:1px solid var(--line)}
-.kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#f1d89c}
-h1{font: bold clamp(30px,8vw,42px)/1.08 Georgia,serif;letter-spacing:.05em;color:#f3d99b;margin:10px 0}
-.symbol{font-size:23px;color:var(--gold);margin:8px}.tag{font:italic 17px Georgia,serif;color:#f5e8ce;margin:0}
-.content{padding:22px 18px}.thanks{text-align:center;color:#f3d99b;font:italic 24px Georgia,serif;margin:0 0 8px}
-.intro{text-align:center;color:var(--muted);font-size:14px;line-height:1.5;margin:0 auto 20px}
-.bank{display:flex;justify-content:center;align-items:center;gap:10px;border:1px solid var(--line);border-radius:14px;padding:13px;background:#151518;margin-bottom:10px}
-.bankicon{width:35px;height:35px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:19px}
-.banktitle{font-size:18px;font-weight:800}.bankname{font-size:12px;color:#f3d99b;margin-top:3px}
-.field{padding:14px 0;border-bottom:1px solid #3b3326}.label{font-size:11px;letter-spacing:.05em;color:var(--gold);margin-bottom:7px}
-.row{display:flex;align-items:center;justify-content:space-between;gap:8px}.value{font-size:15px;font-weight:650;overflow-wrap:anywhere;line-height:1.4}.placeholder{color:#e4d5b7}
-button{font:inherit;cursor:pointer}.copy{flex-shrink:0;background:var(--gold);color:#17120a;border:0;border-radius:9px;padding:10px 11px;font-size:12px;font-weight:800}
-.all{width:100%;margin-top:16px;border:1px solid #f3d99b;border-radius:12px;padding:14px;background:linear-gradient(100deg,#b98a39,#f3d99b,#b98a39);color:#17120a;font-weight:850}
-.status{min-height:20px;text-align:center;color:#f3d99b;font-size:13px;margin-top:10px}.note{font-size:11px;color:#aaa397;line-height:1.5;text-align:center;margin:12px 0 0}
-.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:20px}.step{border:1px solid #403522;border-radius:12px;padding:12px 9px;text-align:center;background:#101114}.num{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;margin:0 auto 7px;background:var(--gold);color:#17120a;font-weight:850}.step p{font-size:12px;line-height:1.4;color:#ded6c7;margin:0}
-footer{text-align:center;border-top:1px solid var(--line);padding:18px 10px;color:#f3d99b;font:italic 16px Georgia,serif}.fine{text-align:center;color:#817b70;font-size:10px;margin:12px 0}
-@media(min-width:440px){.steps{grid-template-columns:repeat(4,1fr)}.step p{font-size:11px}}
-
-body {
-  background: white; !important;
+:root{--ink:#17202a;--gold:#b89a5b;--paper:#fff;--line:#d9cba9}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.page{max-width:1024px;margin:auto;background:#fff;overflow:hidden;box-shadow:0 5px 30px #00000010}
+.hero{position:relative;padding:30px 5.5% 28px;background:#fff;overflow:hidden}
+.hero:before{content:"";position:absolute;left:-130px;top:-185px;width:350px;height:450px;border:5px solid var(--gold);border-radius:50%;transform:rotate(42deg);opacity:.7}
+.brand{display:flex;align-items:center;gap:24px;position:relative}
+.logo{width:135px;flex:0 0 135px}.logo svg{width:100%;height:auto}
+h1{font:500 clamp(28px,5vw,53px)/1.08 Georgia,serif;margin:0;white-space:nowrap}
+.tag{text-align:center;text-transform:uppercase;letter-spacing:.18em;font-size:clamp(10px,1.6vw,16px);margin:12px 0 0}
+.tag:before,.tag:after{content:"";display:inline-block;width:35px;height:1px;background:var(--gold);vertical-align:middle;margin:0 10px}
+.tux{position:absolute;right:-5px;top:-8px;width:170px;height:350px;opacity:.12}
+.thanks{font:italic clamp(30px,5vw,50px) 'Brush Script MT','Segoe Script',cursive;text-align:center;margin:30px 0 10px}
+.intro{text-align:center;font-size:clamp(16px,2.3vw,22px);line-height:1.45;margin:0 auto;max-width:760px}
+.bank{position:relative;margin:0 5.7%;padding:25px 5%;border-radius:30px;background:#fff;box-shadow:0 10px 24px #0000000a}
+.bankhead{display:flex;align-items:center;justify-content:center;gap:16px;max-width:520px;margin:-25px auto 24px;padding:10px 22px;background:var(--ink);color:white;border-radius:60px}
+.bankhead svg{width:48px;height:48px;fill:var(--gold)}.bankhead strong{display:block;font-size:clamp(23px,3vw,32px)}.bankhead span{font-size:20px}
+.content{display:grid;grid-template-columns:.9fr 1.2fr;gap:30px;align-items:center}
+.qrside{text-align:center}.qrbox{border:2px solid #d9cba9;border-radius:24px;padding:12px;background:#fff;width:min(100%,330px);margin:0 auto 18px}.qrbox img{display:block;width:100%}
+.qrcap{font-size:16px;line-height:1.45;max-width:320px;margin:auto}
+.detail{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #d7d2c8}
+.ico{width:48px;height:48px;border-radius:50%;background:#f1ece3;display:grid;place-items:center;font-size:25px}
+.label{display:block;font-size:15px}.value{display:block;font-size:clamp(17px,2.2vw,22px);font-weight:bold;overflow-wrap:anywhere;margin-top:4px}
+.actions{display:grid;gap:9px;margin-top:14px}
+.copy{border:0;border-radius:60px;background:linear-gradient(100deg,#c5aa6d,#b09554);color:white;padding:13px 16px;width:100%;font-size:18px;font-weight:bold;display:flex;align-items:center;justify-content:center;gap:12px;cursor:pointer}
+.copy.dark{background:var(--ink)}.copy small{display:block;font-size:13px;font-weight:normal;text-align:left;margin-top:3px}.copy:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.status{min-height:22px;text-align:center;color:#176b43;font-size:14px;margin:6px 0 0}
+.steps{padding:34px 5% 30px;display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.step{padding:0 14px;border-right:1px solid #d6cdbb}.step:last-child{border:0}.step svg{width:58px;height:58px;fill:none;stroke:var(--ink);stroke-width:2.4;margin-bottom:10px}
+.num{display:grid;place-items:center;width:27px;height:27px;margin:0 auto 9px;background:var(--ink);color:white;border-radius:50%;font-weight:bold}
+.step p{font-size:14px;line-height:1.4;margin:0}
+footer{text-align:center;background:var(--ink);color:#e1c783;padding:30px 12px 35px;font:italic clamp(23px,3.5vw,34px) 'Brush Script MT','Segoe Script',cursive}
+.line{display:inline-block;width:55px;height:1px;background:var(--gold);vertical-align:middle;margin:0 12px}
+@media(max-width:680px){
+.hero{padding:22px 16px 25px}.brand{gap:10px}.logo{width:72px;flex-basis:72px}h1{white-space:normal;font-size:clamp(23px,6vw,35px)}
+.tag{letter-spacing:.07em;font-size:10px}.tag:before,.tag:after{width:12px;margin:0 4px}.tux{width:90px;opacity:.08}
+.thanks{margin-top:25px}.bank{margin:0 12px;padding:20px 14px;border-radius:24px}
+.bankhead{margin-top:-20px;padding:10px 14px;gap:10px}.bankhead svg{width:38px}.bankhead span{font-size:17px}
+.content{grid-template-columns:1fr;gap:22px}.qrbox{width:min(100%,300px)}.detail{grid-template-columns:44px 1fr;gap:9px}
+.ico{width:42px;height:42px;font-size:22px}.value{font-size:18px}
+.steps{grid-template-columns:repeat(2,1fr);gap:25px 0;padding:28px 10px}.step{padding:0 9px}.step:nth-child(2){border-right:0}.step p{font-size:13px}
+.line{width:22px;margin:0 5px}
 }
-
-.page,
-.hero,
-.bank-card,
-.bank {
-  background: #ffffff !important;
-}
-
-</style></head>
-<body><main><section class="card">
-<header><div class="kicker">Elegancia en cada ocasión</div><h1>RENTA DE TRAJES<br>SANTIAGO</h1><div class="symbol">✦ ── ♛ ── ✦</div><p class="tag">Gracias por tu preferencia</p></header>
+@media print{body{background:#fff}.page{box-shadow:none}.copy,.status{display:none}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="hero">
+<div class="brand">
+<div class="logo"><svg viewBox="0 0 130 145" aria-hidden="true"><path d="M20 17 47 5 65 23 83 5 110 17 123 48 94 132 65 143 36 132 7 48Z" fill="#17202a"/><path d="M47 5 65 23 83 5 76 39 65 52 54 39Z" fill="#fff"/><path d="M50 10 65 23 80 10 74 28 65 34 56 28Z" fill="#17202a"/><path d="M38 29 54 39 65 143 23 51Z M92 29 76 39 65 143 107 51Z" fill="#fff"/><circle cx="65" cy="51" r="3.5" fill="#17202a"/><circle cx="65" cy="71" r="3.5" fill="#17202a"/><circle cx="65" cy="91" r="3.5" fill="#17202a"/></svg></div>
+<div style="flex:1;min-width:0"><h1>RENTA DE TRAJES<br>SANTIAGO</h1><p class="tag">Elegancia para cada ocasión</p></div>
+</div>
+<svg class="tux" viewBox="0 0 180 390" aria-hidden="true"><path d="M43 0 90 49 137 0 177 79 155 390H25L3 79Z" fill="#17202a"/><path d="M43 0 90 49 67 100 40 77 32 390H90V49Z" fill="#fff"/><path d="M137 0 90 49 113 100 140 77 148 390H90V49Z" fill="#17202a"/><path d="M69 28 90 49 111 28 104 76 90 91 76 76Z" fill="#17202a"/></svg>
+<p class="thanks">¡Gracias por tu preferencia!</p>
+<p class="intro">Si deseas realizar tu pago por transferencia,<br>escanea el código QR o copia los datos bancarios.</p>
+</header>
+<section class="bank">
+<div class="bankhead"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5 5 20v5h54v-5L32 5ZM10 29h7v21h-7zm13 0h7v21h-7zm13 0h7v21h-7zm13 0h5v21h-5zM5 54h54v5H5z"/></svg><div><strong>Datos bancarios</strong><span>Banco Azteca</span></div></div>
 <div class="content">
-<p class="thanks">Paga fácil por transferencia</p><p class="intro">Copia los datos bancarios y pégalos en la aplicación de tu banco para realizar tu transferencia.</p>
-<div class="bank"><div class="bankicon">▤</div><div><div class="banktitle">Datos bancarios</div><div class="bankname" id="bank">Banco Azteca</div></div></div>
-<div class="field"><div class="label">TITULAR DE LA CUENTA</div><div class="row"><div class="value placeholder" id="holder">Yaremi Rodríguez García </div><button class="copy" onclick="copyField('holder')">Copiar</button></div></div>
-<div class="field"><div class="label">CLABE INTERBANCARIA · 18 DÍGITOS</div><div class="row"><div class="value placeholder" id="clabe"> 127453013466970741 </div><button class="copy" onclick="copyField('clabe')">Copiar CLABE</button></div></div>
-<div class="field"><div class="label">NÚMERO DE TARJETA</div><div class="row"><div class="value placeholder" id="cardDisplay">•••• •••• •••• ••••</div><button class="copy" onclick="copyCard()">Copiar tarjeta</button></div><div class="note" style="text-align:left;margin-top:7px">El número se muestra oculto. Al pulsar “Copiar tarjeta”, se copiará el número completo configurado para esta página.</div></div>
-<button class="all" onclick="copyAll()">COPIAR TODOS LOS DATOS</button><div class="status" id="status" role="status" aria-live="polite"></div>
-<p class="note">Antes de autorizar el pago, verifica el nombre del destinatario y los datos en tu aplicación bancaria. Esta página no procesa pagos ni confirma depósitos.</p>
-<div class="steps"><div class="step"><div class="num">1</div><p>Consulta los datos bancarios.</p></div><div class="step"><div class="num">2</div><p>Copia la CLABE o la tarjeta.</p></div><div class="step"><div class="num">3</div><p>Pega los datos en tu app bancaria.</p></div><div class="step"><div class="num">4</div><p>Revisa y autoriza el pago.</p></div></div>
-</div><footer>Renta de Trajes Santiago · Tu confianza nos impulsa</footer></section><p class="fine">Página informativa de pagos · Renta de Trajes Santiago</p></main>
+<div class="qrside"><div class="qrbox"><img alt="Código QR para abrir la página de datos bancarios" src="https://api.qrserver.com/v1/create-qr-code/?size=420x420&margin=12&data=https%3A%2F%2Ferikcabrera95.github.io%2FRenta-de-trajes-Santiago%2F"></div><p class="qrcap">Escanea el código QR con la cámara de tu celular y accede a nuestros datos bancarios.</p></div>
+<div>
+<div class="detail"><span class="ico">♙</span><div><span class="label">Titular de la cuenta</span><span class="value">Yaremi Rodríguez García</span></div></div>
+<div class="detail"><span class="ico">▣</span><div><span class="label">Banco</span><span class="value">Banco Azteca</span></div></div>
+<div class="detail"><span class="ico">▤</span><div><span class="label">Número de cuenta / CLABE</span><span class="value" id="clabe">127453013466970741</span></div></div>
+<div class="detail"><span class="ico">▤</span><div><span class="label">No. Tarjeta</span><span class="value" id="card">4027660002706838</span></div></div>
+<div class="actions">
+<button class="copy" type="button" data-copy="clabe"><span>▢</span><span>Copiar CLABE<small>Toca para copiar el número de cuenta</small></span></button>
+<button class="copy" type="button" data-copy="card"><span>▢</span><span>Copiar número de tarjeta<small>Toca para copiar los 16 dígitos</small></span></button>
+<button class="copy dark" type="button" data-copy="all"><span>▢</span><span>Copiar todos los datos<small>Titular, banco, CLABE y tarjeta</small></span></button>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+</div></div></div></section>
+<section class="steps">
+<div class="step"><svg viewBox="0 0 64 64"><rect x="13" y="3" width="38" height="58" rx="7"/><path d="M23 12h18M23 52h18M22 25h20v14H22z"/></svg><span class="num">1</span><p>Escanea el código QR con la cámara de tu celular.</p></div>
+<div class="step"><svg viewBox="0 0 64 64"><path d="M5 20 32 4l27 16H5ZM11 25h42M14 27v24m12-24v24m12-24v24m12-24v24M7 56h50"/></svg><span class="num">2</span><p>Abre tu aplicación bancaria y selecciona la opción de transferencias.</p></div>
+<div class="step"><svg viewBox="0 0 64 64"><rect x="19" y="14" width="35" height="43" rx="4"/><path d="M28 14V8h25a4 4 0 0 1 4 4v35M10 22h34v37H10z"/></svg><span class="num">3</span><p>Copia el número de cuenta o CLABE y pega los datos.</p></div>
+<div class="step"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28"/><path d="m17 32 10 10 21-22"/></svg><span class="num">4</span><p>Confirma la transferencia y listo. ¡Muchas gracias!</p></div>
+</section>
+<footer><span class="line"></span>Tu confianza nos impulsa ♡<span class="line"></span></footer>
+</main>
 <script>
-async function clipboard(text){if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return}const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();const ok=document.execCommand('copy');t.remove();if(!ok)throw Error('copy')}
-function val(id){return document.getElementById(id).textContent.trim()}
-async function copyField(id){const v=val(id),s=document.getElementById('status');if(v.toLowerCase().startsWith('agrega aquí')){s.textContent='Este dato debe configurarse antes de usar la página.';return}try{await clipboard(v);s.textContent='Dato copiado. Ya puedes pegarlo en tu app bancaria.'}catch(e){s.textContent='No se pudo copiar automáticamente; mantén presionado el dato para copiarlo.'}}
-const CARD_NUMBER = '4027660002706838';
-async function copyCard(){const s=document.getElementById('status');if(!/^\d{16}$/.test(CARD_NUMBER)){s.textContent='Configura el número de tarjeta de 16 dígitos antes de usar esta función.';return}try{await clipboard(CARD_NUMBER);s.textContent='Número de tarjeta copiado.'}catch(e){s.textContent='No se pudo copiar automáticamente.'}}
-async function copyAll(){const f=[['Banco','bank'],['Titular','holder'],['CLABE','clabe']];if(f.some(([n,id])=>val(id).toLowerCase().startsWith('agrega aquí'))){document.getElementById('status').textContent='Completa los datos antes de utilizar esta función.';return}try{await clipboard(f.map(([n,id])=>n+': '+val(id)).join('\n'));document.getElementById('status').textContent='Banco, titular y CLABE copiados. Copia la tarjeta con su botón.'}catch(e){document.getElementById('status').textContent='Copia cada dato por separado.'}}
+(()=> {
+const data={holder:"Yaremi Rodríguez García",bank:"Banco Azteca",clabe:"127453013466970741",card:"4027660002706838"};
+const status=document.getElementById("status");
+async function copyText(text){
+ if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(text);return true}catch(e){}}
+ const t=document.createElement("textarea");t.value=text;t.setAttribute("readonly","");t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.focus();t.select();t.setSelectionRange(0,t.value.length);
+ let ok=false;try{ok=document.execCommand("copy")}catch(e){}t.remove();return ok;
+}
+document.querySelectorAll("[data-copy]").forEach(button=>button.addEventListener("click",async()=>{
+ const type=button.dataset.copy;
+ const text=type==="clabe"?data.clabe:type==="card"?data.card:`Titular: ${data.holder}\nBanco: ${data.bank}\nCLABE: ${data.clabe}\nNo. Tarjeta: ${data.card}`;
+ const original=button.innerHTML;button.disabled=true;status.textContent="Copiando…";
+ const ok=await copyText(text);
+ if(ok){button.innerHTML="✓ ¡Copiado correctamente!";status.textContent="Dato copiado al portapapeles.";setTimeout(()=>{button.innerHTML=original;button.disabled=false},1800)}
+ else{status.textContent="No se pudo copiar automáticamente. Mantén presionado el dato y elige Copiar.";button.disabled=false}
+}));
+})();
+</script>
+</body></html>
