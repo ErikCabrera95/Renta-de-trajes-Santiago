@@ -24,12 +24,7 @@ h1{font:500 clamp(28px,5vw,53px)/1.08 Georgia,serif;margin:0;white-space:nowrap}
 .bankhead{display:flex;align-items:center;justify-content:center;gap:16px;max-width:520px;margin:-25px auto 24px;padding:10px 22px;background:var(--ink);color:white;border-radius:60px}
 .bankhead svg{width:48px;height:48px;fill:var(--gold)}.bankhead strong{display:block;font-size:clamp(23px,3vw,32px)}.bankhead span{font-size:20px}
 .content{display:grid;grid-template-columns:.9fr 1.2fr;gap:30px;align-items:center}
-.qrside{text-align:center}
-.carousel{position:relative;overflow:hidden;border:2px solid #d9cba9;border-radius:24px;padding:10px;background:#fff;width:min(100%,330px);aspect-ratio:1/1;margin:0 auto 18px}
-.carousel img{display:block;width:100%;height:100%;object-fit:cover;border-radius:15px;transition:opacity .45s ease}
-.carousel-dots{display:flex;justify-content:center;gap:7px;margin-top:10px}
-.carousel-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#d9cba9;cursor:pointer}
-.carousel-dots button.active{background:var(--gold);transform:scale(1.25)}
+.qrside{text-align:center}.carousel{width:min(100%,330px);aspect-ratio:4/5;margin:0 auto 12px;overflow:hidden;border-radius:20px;background:#f4f1eb}.carousel img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:opacity .35s ease}.carousel-dots{display:flex;justify-content:center;gap:8px;margin:10px 0}.carousel-dots button{width:9px;height:9px;border:0;border-radius:50%;padding:0;background:#d9cba9;cursor:pointer}.carousel-dots button.active{background:#b89a5b}
 .qrcap{font-size:16px;line-height:1.45;max-width:320px;margin:auto}
 .detail{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #d7d2c8}
 .ico{width:48px;height:48px;border-radius:50%;background:#f1ece3;display:grid;place-items:center;font-size:25px}
@@ -49,7 +44,7 @@ footer{text-align:center;background:var(--ink);color:#e1c783;padding:30px 12px 3
 .tag{letter-spacing:.07em;font-size:10px}.tag:before,.tag:after{width:12px;margin:0 4px}.tux{width:90px;opacity:.08}
 .thanks{margin-top:25px}.bank{margin:0 12px;padding:20px 14px;border-radius:24px}
 .bankhead{margin-top:-20px;padding:10px 14px;gap:10px}.bankhead svg{width:38px}.bankhead span{font-size:17px}
-.content{grid-template-columns:1fr;gap:22px}.qrbox{width:min(100%,300px)}.detail{grid-template-columns:44px 1fr;gap:9px}
+.content{grid-template-columns:1fr;gap:22px}.carousel{width:min(100%,340px);aspect-ratio:4/5}.detail{grid-template-columns:44px 1fr;gap:9px}
 .ico{width:42px;height:42px;font-size:22px}.value{font-size:18px}
 .steps{grid-template-columns:repeat(2,1fr);gap:25px 0;padding:28px 10px}.step{padding:0 9px}.step:nth-child(2){border-right:0}.step p{font-size:13px}
 .line{width:22px;margin:0 5px}
@@ -62,25 +57,16 @@ footer{text-align:center;background:var(--ink);color:#e1c783;padding:30px 12px 3
 <header class="hero">
 <div class="brand">
 <div class="logo"><svg viewBox="0 0 130 145" aria-hidden="true"><path d="M20 17 47 5 65 23 83 5 110 17 123 48 94 132 65 143 36 132 7 48Z" fill="#17202a"/><path d="M47 5 65 23 83 5 76 39 65 52 54 39Z" fill="#fff"/><path d="M50 10 65 23 80 10 74 28 65 34 56 28Z" fill="#17202a"/><path d="M38 29 54 39 65 143 23 51Z M92 29 76 39 65 143 107 51Z" fill="#fff"/><circle cx="65" cy="51" r="3.5" fill="#17202a"/><circle cx="65" cy="71" r="3.5" fill="#17202a"/><circle cx="65" cy="91" r="3.5" fill="#17202a"/></svg></div>
-<div style="flex:1;min-width:0"><h1>"RENTA DE TRAJES<br>    SANTIAGO"</h1><p class="tag">Elegancia para cada ocasión</p></div>
+<div style="flex:1;min-width:0"><h1>RENTA DE TRAJES<br>SANTIAGO</h1><p class="tag">Elegancia para cada ocasión</p></div>
 </div>
 <svg class="tux" viewBox="0 0 180 390" aria-hidden="true"><path d="M43 0 90 49 137 0 177 79 155 390H25L3 79Z" fill="#17202a"/><path d="M43 0 90 49 67 100 40 77 32 390H90V49Z" fill="#fff"/><path d="M137 0 90 49 113 100 140 77 148 390H90V49Z" fill="#17202a"/><path d="M69 28 90 49 111 28 104 76 90 91 76 76Z" fill="#17202a"/></svg>
 <p class="thanks">¡Gracias por tu preferencia!</p>
-<p class="intro">Para poder realizar pago con transferencia,<br>Copia los datos bancarios.</p>
+<p class="intro">Si deseas realizar tu pago por transferencia,<br>puedes copiar los datos bancarios a continuación.</p>
 </header>
 <section class="bank">
 <div class="bankhead"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5 5 20v5h54v-5L32 5ZM10 29h7v21h-7zm13 0h7v21h-7zm13 0h7v21h-7zm13 0h5v21h-5zM5 54h54v5H5z"/></svg><div><strong>Datos bancarios</strong><span>Banco Azteca</span></div></div>
 <div class="content">
-<div class="qrside">
-  <div class="carousel" aria-label="Galería de fotografías de trajes">
-    <img id="carouselPhoto" src="fotos/traje-1.jpg" alt="Fotografía de un traje de Renta de Trajes Santiago">
-  </div>
-  <div class="carousel" aria-label="Galería de fotografías de trajes">
-    <img id="carouselPhoto" src="fotos/traje-2.jpg" alt="Fotografía de un traje de Renta de Trajes Santiago">
-  </div>
-  <div class="carousel-dots" id="carouselDots" aria-label="Seleccionar fotografía"></div>
-  <p class="qrcap">Conoce algunos de nuestros estilos.</p>
-</div>
+<div class="qrside"><div class="carousel" aria-label="Galería de trajes"><img id="carouselPhoto" src="fotos/traje-1.jpeg" alt="Fotografía de traje 1"></div><div class="carousel-dots" id="carouselDots" aria-label="Elegir fotografía"></div><p class="qrcap">Conoce nuestros estilos y encuentra el traje ideal para tu ocasión.</p></div>
 <div>
 <div class="detail"><span class="ico">♙</span><div><span class="label">Titular de la cuenta</span><span class="value">Yaremi Rodríguez García</span></div></div>
 <div class="detail"><span class="ico">▣</span><div><span class="label">Banco</span><span class="value">Banco Azteca</span></div></div>
@@ -93,7 +79,7 @@ footer{text-align:center;background:var(--ink);color:#e1c783;padding:30px 12px 3
 <p class="status" id="status" role="status" aria-live="polite"></p>
 </div></div></div></section>
 <section class="steps">
-<div class="step"><svg viewBox="0 0 64 64"><rect x="13" y="3" width="38" height="58" rx="7"/><path d="M23 12h18M23 52h18M22 25h20v14H22z"/></svg><span class="num">1</span><p>Conoce nuestros estilos y selecciona el traje ideal.</p></div>
+<div class="step"><svg viewBox="0 0 64 64"><rect x="13" y="3" width="38" height="58" rx="7"/><path d="M23 12h18M23 52h18M22 25h20v14H22z"/></svg><span class="num">1</span><p>Elige el traje que más te guste de nuestra galería.</p></div>
 <div class="step"><svg viewBox="0 0 64 64"><path d="M5 20 32 4l27 16H5ZM11 25h42M14 27v24m12-24v24m12-24v24m12-24v24M7 56h50"/></svg><span class="num">2</span><p>Abre tu aplicación bancaria y selecciona la opción de transferencias.</p></div>
 <div class="step"><svg viewBox="0 0 64 64"><rect x="19" y="14" width="35" height="43" rx="4"/><path d="M28 14V8h25a4 4 0 0 1 4 4v35M10 22h34v37H10z"/></svg><span class="num">3</span><p>Copia el número de cuenta o CLABE y pega los datos.</p></div>
 <div class="step"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28"/><path d="m17 32 10 10 21-22"/></svg><span class="num">4</span><p>Confirma la transferencia y listo. ¡Muchas gracias!</p></div>
@@ -102,6 +88,38 @@ footer{text-align:center;background:var(--ink);color:#e1c783;padding:30px 12px 3
 </main>
 <script>
 (()=> {
+// Cambia aquí los nombres si subes imágenes distintas a la carpeta fotos.
+const photos = [
+  {src:"fotos/traje-1.jpeg",alt:"Fotografía de traje 1"},
+  {src:"fotos/traje-2.jpeg",alt:"Fotografía de traje 2"},
+  {src:"fotos/traje-3.jpeg",alt:"Fotografía de traje 3"},
+  {src:"fotos/traje-4.jpeg",alt:"Fotografía de traje 4"},
+  {src:"fotos/traje-5.jpeg",alt:"Fotografía de traje 5"}
+];
+const photo=document.getElementById("carouselPhoto");
+const dots=document.getElementById("carouselDots");
+let current=0;
+let transitionTimer;
+function showPhoto(i){
+  current=(i+photos.length)%photos.length;
+  photo.style.opacity="0";
+  clearTimeout(transitionTimer);
+  transitionTimer=setTimeout(()=>{
+    photo.src=photos[current].src;
+    photo.alt=photos[current].alt;
+    photo.style.opacity="1";
+  },180);
+  dots.querySelectorAll("button").forEach((dot,n)=>dot.classList.toggle("active",n===current));
+}
+photos.forEach((item,i)=>{
+  const dot=document.createElement("button");
+  dot.type="button";
+  dot.setAttribute("aria-label","Mostrar fotografía "+(i+1));
+  dot.addEventListener("click",()=>showPhoto(i));
+  dots.appendChild(dot);
+});
+showPhoto(0);
+setInterval(()=>showPhoto(current+1),4000);
 const data={holder:"Yaremi Rodríguez García",bank:"Banco Azteca",clabe:"127453013466970741",card:"4027660002706838"};
 const status=document.getElementById("status");
 async function copyText(text){
